@@ -1,4 +1,7 @@
-const nav = React.creatElement(
+import React from "react";
+import ReactDOM from "react-dom";
+
+const nav = React.createElement(
   "nav",
   { className: "menu" },
   React.createElement(

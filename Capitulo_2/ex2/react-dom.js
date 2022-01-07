@@ -1,4 +1,5 @@
-import "C:/Users/pedro/Documents/Pedro/React/Capitulo_2/ex2/styles.css";
+import React from "react";
+import ReactDOM from "react-dom";
 const editora = React.createElement(
   "h1",
   { className: "logo" },

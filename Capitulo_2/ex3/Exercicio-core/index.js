@@ -1,5 +1,3 @@
-import "./styles.css";
-
 let aHome = document.createElement("a");
 let aLivro = document.createElement("a");
 let aAutores = document.createElement("a");
