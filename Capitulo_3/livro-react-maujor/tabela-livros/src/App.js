@@ -1,25 +1,37 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from "react";
+import TabelaBody from "./componets/tabelaBody";
+import TabelaFoot from "./componets/tabelaFoot";
+import TabelaHead from "./componets/tabelaHead";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello World!!
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    livros: [
+      {
+        id: "987-85-7522-632-2",
+        titulo: "Css Grid Layout",
+        autor: "Maurício Samy Silva",
+      },
+      {
+        id: "987-85-7522-895-7",
+        titulo: "Node Essencial",
+        autor: "Ricardo R. Lecheta",
+      },
+      {
+        id: "987-85-7522-512-7",
+        titulo: "Aprendendo Material Desing",
+        autor: "Kyle Mew",
+      },
+    ],
+  };
+  render() {
+    return (
+      <table className="tabela">
+        <TabelaHead />
+        <TabelaBody livros={this.state.livros} />
+        <TabelaFoot />
+      </table>
+    );
+  }
 }
 
 export default App;
